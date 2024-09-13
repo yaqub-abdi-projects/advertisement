@@ -1,0 +1,114 @@
+= Advertisement Metrics and Recommendations
+
+== Overview
+
+This project processes advertisement impression and click data to generate metrics and recommendations. It uses Spring Boot with a reactive approach and MongoDB to store and process the data.
+
+== Prerequisites
+
+- Java 21
+- Maven 3.x
+- Docker (for MongoDB)
+- MongoDB 8.x (managed via Docker)
+
+== Project Structure
+
+- `src/main/java/com/example/advertisement/`: Contains the main application code.
+- `src/main/resources/`: Contains configuration files and resources.
+- `src/main/resources/application.properties`: Spring Boot configuration file.
+- `run.sh`: Shell script to run MongoDB in Docker and execute the application.
+- `pom.xml`: Maven build configuration file.
+
+== Running the Application
+
+1. **Start MongoDB using Docker**
+
+   Run the following command to start MongoDB:
+
+./run.sh
+
+
+This script will:
+- Start MongoDB in a Docker container.
+- Build the Maven project.
+- Run the application.
+
+2. **Load Data**
+
+Use the following command to load impression and click data:
+
+shell> load <impressionFilePath> <clickFilePath>
+
+
+Replace `<impressionFilePath>` with the path to the impressions JSON file and `<clickFilePath>` with the path to the clicks JSON file.
+
+3. **Calculate Metrics**
+
+Use the following command to calculate metrics and save them to a JSON file:
+
+shell> metrics <metricsOutputPath>
+
+
+Replace `<metricsOutputPath>` with the path where you want to save the metrics JSON file.
+
+4. **Generate Recommendations**
+
+Use the following command to generate recommendations and save them to a JSON file:
+
+shell> recommendations <recommendationsOutputPath> <numberAdvertisers>
+
+
+Replace `<recommendationsOutputPath>` with the path where you want to save the recommendations JSON file and `<numberAdvertisers>` with the number of top advertisers to recommend.
+
+== JSON Schema
+
+*Impression Event Schema*
+
+{
+"id": "string",
+"app_id": "integer",
+"country_code": "string",
+"advertiser_id": "integer"
+}
+
+Click Event Schema
+
+{
+  "impression_id": "string",
+  "revenue": "double"
+}
+
+Metrics Output Schema
+
+[
+  {
+    "app_id": 1,
+    "country_code": "US",
+    "impressions": 102,
+    "clicks": 12,
+    "revenue": 10.2
+  }
+]
+
+Recommendations Output Schema
+
+[
+  {
+    "app_id": 1,
+    "country_code": "US",
+    "recommended_advertiser_ids": [32, 12, 45, 4, 1]
+  }
+]
+
+
+== Future Work
+
+Error Handling: Improve error handling for file parsing and data processing.
+Performance Optimization: Analyze and optimize the performance of data processing pipelines.
+Schema Validation: Add schema validation for incoming JSON files to ensure data quality.
+
+== Contact
+
+For any questions or feedback, please contact yaghob.abdi@gmail.com.com.
+
+

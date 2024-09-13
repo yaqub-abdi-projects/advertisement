@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: advertisement
+test-container:
+  mongo:
+    image: "mongo:8.0.0-rc11"
+    reuse: false

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "app_id": 101,
+    "country_code": "US",
+    "advertiser_id": 202
+  },
+  {
+    "id": "b2c3d4e5-f678-9012-bcde-f23456789012",
+    "app_id": 102,
+    "country_code": "GB",
+    "advertiser_id": 203
+  },
+  {
+    "id": "c3d4e5f6-7890-1234-cdef-345678901234",
+    "app_id": 101,
+    "country_code": "US",
+    "advertiser_id": 204
+  }
+]
