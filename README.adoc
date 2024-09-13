@@ -25,7 +25,7 @@ This project processes advertisement impression and click data to generate metri
 
    Run the following command to start MongoDB:
 
-./run.sh
+    ./run.sh
 
 
 This script will:
@@ -37,7 +37,7 @@ This script will:
 
 Use the following command to load impression and click data:
 
-shell> load <impressionFilePath> <clickFilePath>
+  shell> load <impressionFilePath> <clickFilePath>
 
 
 Replace `<impressionFilePath>` with the path to the impressions JSON file and `<clickFilePath>` with the path to the clicks JSON file.
@@ -46,7 +46,7 @@ Replace `<impressionFilePath>` with the path to the impressions JSON file and `<
 
 Use the following command to calculate metrics and save them to a JSON file:
 
-shell> metrics <metricsOutputPath>
+  shell> metrics <metricsOutputPath>
 
 
 Replace `<metricsOutputPath>` with the path where you want to save the metrics JSON file.
@@ -55,7 +55,7 @@ Replace `<metricsOutputPath>` with the path where you want to save the metrics J
 
 Use the following command to generate recommendations and save them to a JSON file:
 
-shell> recommendations <recommendationsOutputPath> <numberAdvertisers>
+  shell> recommendations <recommendationsOutputPath> <numberAdvertisers>
 
 
 Replace `<recommendationsOutputPath>` with the path where you want to save the recommendations JSON file and `<numberAdvertisers>` with the number of top advertisers to recommend.
@@ -109,6 +109,6 @@ Schema Validation: Add schema validation for incoming JSON files to ensure data 
 
 == Contact
 
-For any questions or feedback, please contact yaghob.abdi@gmail.com.com.
+For any questions or feedback, please contact yaghob.abdi@gmail.com.
 
 
