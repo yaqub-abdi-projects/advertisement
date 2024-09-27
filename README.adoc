@@ -37,10 +37,9 @@ This script will:
 
 Use the following command to load impression and click data:
 
-  shell> load <impressionFilePath> <clickFilePath>
+  shell> load <impressionFilePathPattern> <clickFilePathPattern>
 
-
-Replace `<impressionFilePath>` with the path to the impressions JSON file and `<clickFilePath>` with the path to the clicks JSON file.
+Replace `<impressionFilePathPattern>` with the path pattern for the impressions JSON files and `<clickFilePathPattern>` with the path pattern for the clicks JSON files. You can specify multiple files by using these path patterns. For example, replace `/x/y/z/click*.json` with the desired pattern for your click JSON files, and `/x/y/z/impression*.json` with the corresponding pattern for your impression JSON files. This allows you to load all relevant files that match the specified patterns at once.
 
 3. **Calculate Metrics**
 
